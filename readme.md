@@ -48,6 +48,12 @@ console.log(camelToKebabCase("helloWorld"));
 // prints "camel-to-kebab-case"
 console.log(camelToKebabCase("camelToKebabCase"));
 
+// prints "testing-123"
+console.log(camelToKebabCase("testing123"));
+
+// prints "inner-html"
+console.log(camelToKebabCase("innerHTML"));
+
 // prints "border-top-left-radius"
 console.log(camelToKebabCase("borderTopLeftRadius"));
 ```

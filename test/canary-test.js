@@ -93,5 +93,13 @@ canary.test("pascal case inputs", function(){
     assert(camelToKebabCase("PascalWithEmoji😶") === "pascal-with-emoji😶");
 });
 
+canary.test("readme example cases", function(){
+    assert(camelToKebabCase("helloWorld") === "hello-world");
+    assert(camelToKebabCase("camelToKebabCase") === "camel-to-kebab-case");
+    assert(camelToKebabCase("testing123") === "testing-123");
+    assert(camelToKebabCase("innerHTML") === "inner-html");
+    assert(camelToKebabCase("borderTopLeftRadius") === "border-top-left-radius");
+});
+
 // Run tests, report results, and quit process with the appropriate status code
 canary.doReport();
