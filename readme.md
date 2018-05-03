@@ -1,6 +1,8 @@
 # camelToKebabCase
 
-This is a library implementing one function, **camelToKebabCase**.
+[![Build Status](https://travis-ci.org/pineapplemachine/camel-to-kebab-js.svg?branch=master)](https://travis-ci.org/pineapplemachine/camel-to-kebab-js)
+
+This is a JavaScript library implementing one function, **camelToKebabCase**.
 It accepts a _camelCase_ string as input and outputs a _kebab-case_ equivalent.
 
 The package is licensed according to the very permissive
