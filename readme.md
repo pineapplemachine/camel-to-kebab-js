@@ -3,6 +3,9 @@
 This is a library implementing one function, **camelToKebabCase**.
 It accepts a _camelCase_ string as input and outputs a _kebab-case_ equivalent.
 
+The package is licensed according to the very permissive
+[zlib/libpng license](https://github.com/pineapplemachine/camel-to-kebab-js/blob/master/LICENSE).
+
 ## Installation
 
 You can add **camelToKebabCase** to your JavaScript project by using a
