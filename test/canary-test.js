@@ -54,6 +54,7 @@ canary.test("name of library as input", function(){ // :D
 canary.test("mixed letters and numbers", function(){
     assert(camelToKebabCase("helloWorld123") === "hello-world-123");
     assert(camelToKebabCase("1337testCase") === "1337-test-case");
+    assert(camelToKebabCase("100CapCase") === "100-cap-case");
     assert(camelToKebabCase("one2three4Five") === "one-2-three-4-five");
 });
 
@@ -82,6 +83,14 @@ canary.test("emoji in input", function(){
 canary.test("object input with toString override", function(){
     const obj = {toString: function(){return "testObject";}};
     assert(camelToKebabCase(obj) === "test-object");
+});
+
+canary.test("pascal case inputs", function(){
+    assert(camelToKebabCase("Test") === "test");
+    assert(camelToKebabCase("PascalCase") === "pascal-case");
+    assert(camelToKebabCase("PascalInnerHTML") === "pascal-inner-html");
+    assert(camelToKebabCase("Pascal123") === "pascal-123");
+    assert(camelToKebabCase("PascalWithEmoji😶") === "pascal-with-emoji😶");
 });
 
 // Run tests, report results, and quit process with the appropriate status code

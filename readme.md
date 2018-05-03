@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/pineapplemachine/camel-to-kebab-js.svg?branch=master)](https://travis-ci.org/pineapplemachine/camel-to-kebab-js)
 
 This is a JavaScript library implementing one function, **camelToKebabCase**.
-It accepts a _camelCase_ string as input and outputs a _kebab-case_ equivalent.
+It accepts a _camelCase_ string as input and outputs a _kebab-case_ equivalent. It also works for _PascalCase_ inputs.
 
 The package is licensed according to the very permissive
 [zlib/libpng license](https://github.com/pineapplemachine/camel-to-kebab-js/blob/master/LICENSE).
