@@ -1,0 +1,30 @@
+<html>
+    <header>
+        <title>camel-to-kebab browser test</title>
+        <meta charset="UTF-8">
+        <!-- Import the module -->
+        <script src="../src/camel-to-kebab.js"></script>
+        <!-- Test it -->
+        <script>
+            // Make sure that the module can be used in the browser
+            document.body.onload = function(){
+                // Check preconditions
+                if(!camelToKebabCase){
+                    throw new Error("Symbol not present.");
+                }
+                if(!(camelToKebabCase instanceof Function)){
+                    throw new Error("Symbol isn't a function.");
+                }
+                // Run a test
+                const result = camelToKebabCase("browserTest");
+                console.log("Output: " + result);
+                // Verify output
+                if(result !== "browser-test"){
+                    throw new Error("Incorrect output.");
+                }
+                // Report success
+                console.log("Browser test ran successfully.");
+            };
+        </script>
+    </header>
+</html>
