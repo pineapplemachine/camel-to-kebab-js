@@ -42,8 +42,10 @@
     "dist-test": "node test/dist-test.js",
     "es-test": "node --experimental-modules test/es-module-test.mjs",
     "test-all": "npm run test && npm run es-test && npm run dist-test && npm run uglify-test",
-    "build": "echo 'Copying source to dist/ directory.' && cp src/camel-to-kebab.js dist/camel-to-kebab.js && echo 'Uglifying source.' && node_modules/uglify-js/bin/uglifyjs --compress --mangle --output dist/camel-to-kebab.min.js src/camel-to-kebab.js && npm run add-uglified-comments",
-    "add-uglified-comments": "echo \"$(head -4 dist/camel-to-kebab.js)\n$(cat dist/camel-to-kebab.min.js)\" > dist/camel-to-kebab.min.js",
+    "build": "node bin/build.js",
+    "build-unix": "echo 'Copying source to dist/ directory.' && cp src/camel-to-kebab.js dist/camel-to-kebab.js && echo 'Uglifying source.' && node_modules/uglify-js/bin/uglifyjs --compress --mangle --output dist/camel-to-kebab.min.js src/camel-to-kebab.js && npm run add-uglified-comments",
+    "build-win": "echo 'Copying source to dist/ directory.' && copy src\\camel-to-kebab.js dist\\ /y && echo 'Uglifying source.' && node node_modules/uglify-js/bin/uglifyjs --compress --mangle --output dist/camel-to-kebab.min.js src/camel-to-kebab.js && npm run add-uglified-comments",
+    "add-uglified-comments": "node bin/add-uglified-comments.js",
     "prepublish": "echo 'Building and testing package.' && npm run build && npm run test-all"
   }
 }
