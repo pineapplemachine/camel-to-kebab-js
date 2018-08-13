@@ -17,8 +17,8 @@ canary.test("blank input", function(){
 canary.test("non-string inputs", function(){
     assert(camelToKebabCase(0) === "0");
     assert(camelToKebabCase(123) === "123");
-    assert(camelToKebabCase(null) === "null");
-    assert(camelToKebabCase(undefined) === "undefined");
+    assert(camelToKebabCase(null) === null);
+    assert(camelToKebabCase(undefined) === undefined);
 });
 
 canary.test("one-word input", function(){

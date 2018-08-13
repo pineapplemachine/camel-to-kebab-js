@@ -5,6 +5,10 @@
 // Converts a camelCase input string to kebab-case output.
 // If the input is not a string, it will be coerced to one.
 function camelToKebabCase(text){
+    // When the input was null or undefined, return that same value
+    if(text === null || text === undefined){
+        return text;
+    }
     // The output string, to be built in the loop
     var result = "";
     // Counts consecutive upper-case characters
