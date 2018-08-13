@@ -2,7 +2,7 @@
 
 # v1.1.0
 
-Third release. 13 August 2018.
+Fourth release. 13 August 2018.
 
 - Improve behavior for null and undefined inputs
 - Improve behavior for input strings containing spaces
