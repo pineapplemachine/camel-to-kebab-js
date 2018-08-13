@@ -20,20 +20,24 @@ function camelToKebabCase(text){
     var string = String(text);
     for(var i = 0; i < string.length; i++){
         var ch = string[i];
-        // If it's an upper-case letter:
-        if(ch !== ch.toLowerCase()){
+        var chLower = ch.toLowerCase();
+        // If it's an upper-case letter (not preceded by ascii whitespace):
+        if(ch !== chLower){
+            var prev = result[result.length - 1];
             // Handle cases like "innerHTML" => "inner-html",
             // NOT "inner-h-t-m-l"
             if(upper > 1 && result.length > 1){
-                result = result.slice(0, result.length - 2) + result[result.length - 1];
+                result = result.slice(0, result.length - 2) + prev;
             }
             // Add a hyphen (but not at the beginning of the output, and not
-            // two in a row)
-            if(result.length && result[result.length - 1] !== "-"){
+            // two in a row, and not after whitespace)
+            if(result.length && prev !== "-" &&
+                prev !== " " && prev !== "\t" && prev !== "\r" && prev !== "\n"
+            ){
                 result += "-";
             }
             // Append the lower-case character
-            result += ch.toLowerCase();
+            result += chLower;
             // Update upper-case and numeric state
             upper++;
             numeric = false;
