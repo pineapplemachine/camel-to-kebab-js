@@ -1,6 +1,6 @@
 {
   "name": "camel-to-kebab",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Convert camelCase inputs to kebab-case outputs.",
   "keywords": [
     "text",
@@ -21,8 +21,8 @@
   "license": "Zlib",
   "dependencies": {},
   "devDependencies": {
-    "canary-test": "~1.0.1",
-    "uglify-js": "~3.3.23"
+    "canary-test": "1.0.3",
+    "uglify-js": "3.3.23"
   },
   "main": "dist/camel-to-kebab.js",
   "files": [
@@ -46,7 +46,6 @@
     "test": "node test/canary-test.js",
     "dist-test": "node test/dist-test.js",
     "uglify-test": "node test/uglify-test.js",
-    "dist-test": "node test/dist-test.js",
     "es-test": "node --experimental-modules test/es-module-test.mjs",
     "test-all": "npm run test && npm run es-test && npm run dist-test && npm run uglify-test",
     "build": "node bin/build.js",
