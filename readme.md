@@ -5,7 +5,7 @@
 This is a JavaScript library implementing one function, **camelToKebabCase**.
 It accepts a _camelCase_ string as input and outputs a _kebab-case_ equivalent. It also works for _PascalCase_ inputs.
 
-This library is very lightweight at 827 bytes minified and 431 bytes gzipped. It requires no external dependencies, and it's licensed according to the permissive
+This library is very lightweight at 892 bytes minified and 467 bytes gzipped. It requires no external dependencies, and it's licensed according to the permissive
 [zlib/libpng license](https://github.com/pineapplemachine/camel-to-kebab-js/blob/master/LICENSE).
 
 ## Installation
