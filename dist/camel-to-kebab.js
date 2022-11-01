@@ -30,14 +30,14 @@ function camelToKebabCase(text){
                 result = result.slice(0, result.length - 2) + prev;
             }
             // Add a hyphen (but not at the beginning of the output, and not
-            // two in a row, and not right after whitespace)
+            // two in a row, and not after whitespace)
             if(result.length && prev !== "-" &&
                 prev !== " " && prev !== "\t" && prev !== "\r" && prev !== "\n"
             ){
                 result += "-";
             }
             // Append the lower-case character
-            result += ch.toLowerCase();
+            result += chLower;
             // Update upper-case and numeric state
             upper++;
             numeric = false;
@@ -84,6 +84,7 @@ function camelToKebabCase(text){
 // Export it
 if(typeof(module) !== "undefined"){
     module.exports = camelToKebabCase;
+    module.exports.default = camelToKebabCase;
 }
 if(typeof(window) !== "undefined"){
     window.camelToKebabCase = camelToKebabCase;

@@ -1,6 +1,6 @@
 {
   "name": "camel-to-kebab",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Convert camelCase inputs to kebab-case outputs.",
   "keywords": [
     "text",
@@ -25,8 +25,10 @@
     "uglify-js": "3.3.23"
   },
   "main": "dist/camel-to-kebab.js",
+  "types": "camel-to-kebab.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "camel-to-kebab.d.ts"
   ],
   "repository": {
     "type": "git",

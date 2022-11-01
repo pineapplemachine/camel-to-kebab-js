@@ -1,5 +1,17 @@
 # Changelog for camel-to-kebab
 
+# v1.1.2
+
+Sixth release. 1 November 2022.
+
+- Fix TypeScript definitions *.d.ts file not being correctly included
+
+# v1.1.1
+
+Fifth release. 13 April 2018.
+
+- Add a TypeScript definitions *.d.ts file
+
 # v1.1.0
 
 Fourth release. 13 August 2018.

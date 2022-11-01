@@ -84,6 +84,7 @@ function camelToKebabCase(text){
 // Export it
 if(typeof(module) !== "undefined"){
     module.exports = camelToKebabCase;
+    module.exports.default = camelToKebabCase;
 }
 if(typeof(window) !== "undefined"){
     window.camelToKebabCase = camelToKebabCase;
